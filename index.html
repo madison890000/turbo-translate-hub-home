@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!-- Primary SEO -->
+    <title>Turbo Translate Hub｜多端一键翻译工具 | Teams, Slack, GitHub, WhatsApp</title>
+    <meta name="description" content="Turbo Translate Hub：在 Teams、Slack、GitHub、WhatsApp 中一键翻译并发送目标语言消息，让跨国团队协作更流畅。" />
+    <meta name="keywords" content="翻译, 多端翻译, 实时翻译, Teams翻译, Slack翻译, GitHub翻译, WhatsApp翻译, 翻译工具" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://yourdomain.com/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Turbo Translate Hub｜多端一键翻译工具" />
+    <meta property="og:description" content="在 Teams、Slack、GitHub、WhatsApp 中一键翻译并发送目标语言消息，让跨国团队协作更流畅。" />
+    <meta property="og:url" content="https://yourdomain.com/" />
+    <meta property="og:image" content="https://yourdomain.com/og-image.png" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Turbo Translate Hub｜多端一键翻译工具" />
+    <meta name="twitter:description" content="在 Teams、Slack、GitHub、WhatsApp 中一键翻译并发送目标语言消息，让跨国团队协作更流畅。" />
+    <meta name="twitter:image" content="https://yourdomain.com/twitter-card.png" />
+
+    <!-- JSON‑LD Structured Data -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "Turbo Translate Hub",
+            "operatingSystem": "Windows, macOS, Linux",
+            "applicationCategory": "BusinessApplication",
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+            },
+            "url": "https://yourdomain.com/",
+            "description": "在 Teams、Slack、GitHub、WhatsApp 中一键翻译并发送目标语言消息，让跨国团队协作更流畅。"
+        }
+    </script>
+
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+
+    <style>
+        :root {
+            --primary-color: #6A5ACD;
+            --text-color: #333;
+            --bg-light: #f9f9f9;
+            --btn-radius: 4px;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            color: var(--text-color);
+            background-color: #fff;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .hero {
+            background-color: var(--primary-color);
+            color: #fff;
+            text-align: center;
+            padding: 80px 20px;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        .hero p {
+            font-size: 1.125rem;
+            margin-bottom: 30px;
+        }
+        .btn {
+            display: inline-block;
+            font-size: 1rem;
+            padding: 12px 30px;
+            margin: 0 10px;
+            border-radius: var(--btn-radius);
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary {
+            background-color: #fff;
+            color: var(--primary-color);
+            border: 2px solid #fff;
+        }
+        .btn-primary:hover {
+            background-color: rgba(255,255,255,0.9);
+        }
+        .btn-secondary {
+            background-color: transparent;
+            color: #fff;
+            border: 2px solid #fff;
+        }
+        .btn-secondary:hover {
+            background-color: rgba(255,255,255,0.2);
+        }
+        .features {
+            background-color: var(--bg-light);
+            padding: 60px 20px;
+        }
+        .feature-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        .feature-item {
+            background: #fff;
+            flex: 1 1 calc(33.333% - 20px);
+            min-width: 460px;
+            padding: 30px 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .feature-item img {
+            width: 748px;
+            /*height: 48px;*/
+            margin-bottom: 15px;
+        }
+        .feature-item h3 {
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+        }
+        .feature-item p {
+            font-size: 0.95rem;
+            color: #555;
+        }
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .feature-list {
+                flex-direction: column;
+                align-items: center;
+            }
+            .feature-item {
+                max-width: 400px;
+            }
+        }
+
+        #logo {
+            border-radius: 50%;
+            position: absolute;
+            left: 8%;
+        }
+
+        .pricing {
+            background-color: var(--bg-light);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .pricing h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 40px;
+        }
+
+        .pricing-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: var(--card-radius);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            width: 280px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card.highlighted {
+            border: 2px solid var(--primary-color);
+        }
+
+        .card-header {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+
+        .card-body {
+            padding: 20px;
+            color: var(--text-color);
+        }
+
+        .card-body p {
+            margin: 0 0 20px;
+            font-size: 1rem;
+        }
+
+        .btn-contact {
+            display: inline-block;
+            padding: 10px 24px;
+            background-color: var(--primary-color);
+            color: #fff;
+            border-radius: var(--btn-radius);
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+
+        .btn-contact:hover {
+            background-color: darken(var(--primary-color), 10%);
+        }
+
+        .note {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .pricing-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+<section class="hero">
+    <div class="container">
+        <img id="logo" src="./favicon.svg" alt="Turbo Translate Hub Logo" width="150" height="auto">
+        <h1>打破语言壁垒，极速多端翻译</h1>
+        <p>在 Teams、Slack、GitHub、WhatsApp 中，一键发送目标语言消息，让跨国团队协作更流畅。</p>
+        <button class="btn btn-primary" disabled>敬请期待，即将发布</button>
+<!--        <a href="#" class="btn btn-primary">立即下载</a>-->
+<!--        <a href="#" class="btn btn-secondary">了解更多</a>-->
+    </div>
+</section>
+
+<section class="features">
+    <div class="container">
+        <div class="feature-list">
+            <div class="feature-item">
+                <img src="./example.1.png" alt="一键翻译 图标">
+                <h3>一键翻译</h3>
+                <p>内置 Teams、Slack、GitHub 和 WhatsApp 的一键翻译功能</p>
+            </div>
+            <div class="feature-item">
+                <img src="./example.2.png" alt="自动发送 图标">
+                <h3>自动/手动发送</h3>
+                <p>支持输入文字，并自动翻译为目标语言并发送，支持手动和自动发送</p>
+            </div>
+            <div class="feature-item">
+                <img src="./example.3.png" alt="AI智能翻译 图标">
+                <h3>划词翻译</h3>
+                <p>在应用中选中词汇后，快捷键触发AI智能解释</p>
+            </div>
+            <div class="feature-item">
+                <h3>常用小功能</h3>
+                <p>支持一些常用小功能，例如保持 Teams 长久在线等</p>
+            </div>
+            <div class="feature-item">
+                <h3>更多功能</h3>
+                <p>持续开发中。。。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="pricing">
+    <div class="container">
+        <h2>价格方案</h2>
+        <div class="pricing-cards">
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">免费套餐</span>
+                </div>
+                <div class="card-body">
+                    <p>注册即赠 <strong>1000 Token</strong></p>
+                </div>
+            </div>
+            <div class="card highlighted">
+                <div class="card-header">
+                    <span class="card-title">专业套餐</span>
+                </div>
+                <div class="card-body">
+                    <p><strong>450 元</strong> / 购买 <strong>150M Token</strong></p>
+                </div>
+            </div>
+        </div>
+        <p class="note">付款请联系客服，微信号：<strong>shifuma890000</strong></p>
+    </div>
+</section>
+</body>
+</html>
